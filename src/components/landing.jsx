@@ -34,7 +34,7 @@ function Landing() {
                 <h2 className='text-[20px] text-center text-gray-400 font-normal m-0'>I am Mohit Chaudhary</h2>
                 <Typewriter/>
             </motion.div>
-            <motion.div initial={{x:-2000}} animate={{x:0}} transition={{delay:1}} className='mt-5 flex justify-center gap-2'>
+            <motion.div initial={{x:-2000}} animate={{x:0}} transition={{delay:1}} className='mt-5 flex justify-center gap-3'>
                 <a href="https://www.instagram.com/radhe_chaudhary_2k4/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon style={{ fontSize: 24, color:'gray' }} icon={faInstagram}/></a>
                 <a href="https://github.com/radhechaudhary" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} style={{ fontSize: 24, color:"GrayText" }}/></a>
                 <a href="https://www.linkedin.com/in/mohit-chaudhary-5a0002272/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} style={{ fontSize: 24, color:'GrayText' }}/></a>
