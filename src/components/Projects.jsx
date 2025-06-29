@@ -12,7 +12,7 @@ import {motion, useScroll, useTransform} from 'framer-motion'
         {name:'Ai Assistant', photo:Ai, link:"https://ai-assistant-nine-bice.vercel.app/", description:"This a vocal Ai assistant using google gemini"},
         {name:'Chat', photo:chat, link:"https://chat-app-frontend-two-gold.vercel.app/login", description:"Full fledge multi tier messaging web application"},
         {name:'Electricity Billing System', photo:EBS, link:"", description:"Semi automated billing system for electricity company and  consumers"},
-        {name:'Keeper', photo:Keeper, link:"", description:"A react application for saving Notes in it"}
+        {name:'Keeper', photo:Keeper, link:"https://keeperappproject.vercel.app/", description:"A react application for saving Notes in it"}
     ]
 
 function Projects() {
