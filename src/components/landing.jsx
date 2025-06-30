@@ -12,6 +12,7 @@ function Landing() {
     const vh = document.sc
     const {scrollYProgress} = useScroll();
     var opacity =useTransform(scrollYProgress, [0,0.1], [1,0])
+    var opacity2 =useTransform(scrollYProgress, [0,0.06], [1,0])
 
     const { scrollY } = useScroll();
     const [isVisible, setIsVisible] = useState(true);
@@ -28,7 +29,8 @@ function Landing() {
     
   return (
     <>
-    {isVisible?<motion.div ref = {scrollRef} style={{opacity}} className='h-[100vh] w-full flex justify-center items-center z-10  fixed top-0 left-0'>
+    {isVisible?<>
+    <motion.div ref = {scrollRef} style={{opacity}} className='h-[100vh] hidden w-full md:flex justify-center items-center z-10  fixed top-0 left-0'>
         <motion.div  className='flex flex-col items-center'>
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5, duration:2}} className=''>
                 <h2 className='text-[20px] text-center text-gray-400 font-normal m-0'>I am Mohit Chaudhary</h2>
@@ -41,7 +43,22 @@ function Landing() {
             </motion.div>
         </motion.div>
         <div className='bg-[url("./bg_landing.png")] bg-center w-full absolute h-full -z-10 opacity-[0.07]'/>
-    </motion.div>:null}
+    </motion.div>
+    <motion.div ref = {scrollRef} style={{opacity:opacity2}} className='h-[100vh] w-full flex md:hidden justify-center items-center z-10  fixed top-0 left-0'>
+        <motion.div  className='flex flex-col items-center'>
+            <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5, duration:2}} className=''>
+                <h2 className='text-[20px] text-center text-gray-400 font-normal m-0'>I am Mohit Chaudhary</h2>
+                <Typewriter/>
+            </motion.div>
+            <motion.div initial={{x:-2000}} animate={{x:0}} transition={{delay:1}} className='mt-5 flex justify-center gap-3'>
+                <a href="https://www.instagram.com/radhe_chaudhary_2k4/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon style={{ fontSize: 24, color:'gray' }} icon={faInstagram}/></a>
+                <a href="https://github.com/radhechaudhary" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} style={{ fontSize: 24, color:"GrayText" }}/></a>
+                <a href="https://www.linkedin.com/in/mohit-chaudhary-5a0002272/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} style={{ fontSize: 24, color:'GrayText' }}/></a>
+            </motion.div>
+        </motion.div>
+        <div className='bg-[url("./bg_landing.png")] bg-center w-full absolute h-full -z-10 opacity-[0.07]'/>
+    </motion.div>
+    </>:null}
     </>
   )
 }

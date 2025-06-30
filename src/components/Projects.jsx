@@ -27,12 +27,23 @@ function Projects() {
    const y = useTransform(scrollYProgress, [0,0.5], [300, 0])
     return (
         <div ref = {scrollRef} className='overflow-hidden z-10 pb-10'>
-            <motion.div className='w-full flex flex-col items-center'>
+            <motion.div className='w-full md:flex  flex-col hidden items-center'>
                 <div className='bg-[url("./projects_bg.png")] bg-cover  w-full absolute h-full opacity-[0.6] pb-10'/>
                 <h1 className='text-2xl font-extrabold mb-10 w-full mt-10 z-10'> 👩🏻‍💻 My Works....</h1>
                 <motion.div className='flex gap-20 flex-wrap justify-center opacity-10'
                 transition={{ease:'easeIn'}}
                 style={{opacity: opacity, scale:scale, rotateX:rotate, rotateY:rotate, rotateZ:rotate}}>
+                    {projects.map((project, index)=>{
+                        return  <ProjectCard key={index} title={project.name} image={project.photo} desc={project.description} link={project.link} sr={index+1} />
+                    })}
+                </motion.div>
+            </motion.div>
+            <motion.div className='w-full flex md:hidden flex-col items-center'>
+                <div className=' bg-cover  w-full absolute h-full opacity-[0.6] pb-10'/>
+                <h1 className='text-2xl font-extrabold mb-10 w-full mt-10 z-10'> 👩🏻‍💻 My Works....</h1>
+                <motion.div className='flex gap-20 flex-wrap justify-center '
+                transition={{ease:'easeIn'}}
+                >
                     {projects.map((project, index)=>{
                         return  <ProjectCard key={index} title={project.name} image={project.photo} desc={project.description} link={project.link} sr={index+1} />
                     })}
