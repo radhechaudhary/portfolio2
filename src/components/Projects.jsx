@@ -6,6 +6,7 @@ import chat from '../assets/chatpage.png'
 import Ai from '../assets/Ai.png'
 import Keeper from '../assets/keeper-app.png'
 import {motion, useScroll, useTransform} from 'framer-motion'
+import bg from '../../public/projects_bg.png'
 
  const projects=[
         {name:'Hotelier', photo:Hotelier, link:" https://github.com/radhechaudhary/Hotelier.git", description:"An ultimate System for managing hotels"},
@@ -28,7 +29,7 @@ function Projects() {
     return (
         <div ref = {scrollRef} className='overflow-hidden z-10 pb-10'>
             <motion.div className='w-full md:flex  flex-col hidden items-center'>
-                <div className='bg-[url("./projects_bg.png")] bg-cover  w-full absolute h-full opacity-[0.6] pb-10'/>
+                <div className=' w-full absolute h-full opacity-[0.6] pb-10' style={{backgroundImage:`url(${bg})`, backgroundSize:'cover'}}/>
                 <h1 className='text-2xl font-extrabold mb-10 w-full mt-10 z-10'> 👩🏻‍💻 My Works....</h1>
                 <motion.div className='flex gap-20 flex-wrap justify-center opacity-10'
                 transition={{ease:'easeIn'}}

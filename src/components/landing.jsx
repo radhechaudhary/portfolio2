@@ -6,6 +6,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useRef } from 'react'
+import bg from '../../public/bg_landing.png'
 
 function Landing() {
     const scrollRef = useRef(null)
@@ -42,7 +43,8 @@ function Landing() {
                 <a href="https://www.linkedin.com/in/mohit-chaudhary-5a0002272/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} style={{ fontSize: 24, color:'GrayText' }}/></a>
             </motion.div>
         </motion.div>
-        <div className='bg-[url("./bg_landing.png")] bg-center w-full absolute h-full -z-10 opacity-[0.07]'/>
+        <div className='bg-center w-full absolute h-full -z-10 opacity-[0.07]'
+        style={{backgroundImage:`url(${bg})`, backgroundPosition:'center'}}/>
     </motion.div>
     <motion.div ref = {scrollRef} style={{opacity:opacity2}} className='h-[100vh] w-full flex md:hidden justify-center items-center z-10  fixed top-0 left-0'>
         <motion.div  className='flex flex-col items-center'>
@@ -56,7 +58,9 @@ function Landing() {
                 <a href="https://www.linkedin.com/in/mohit-chaudhary-5a0002272/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} style={{ fontSize: 24, color:'GrayText' }}/></a>
             </motion.div>
         </motion.div>
-        <div className='bg-[url("./bg_landing.png")] bg-center w-full absolute h-full -z-10 opacity-[0.07]'/>
+        <div className=' bg-center w-full absolute h-full -z-10 opacity-[0.07]'
+        style={{backgroundImage:`url(${bg})`, backgroundPosition:'center'}}
+        />
     </motion.div>
     </>:null}
     </>
