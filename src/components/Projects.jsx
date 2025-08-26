@@ -11,7 +11,7 @@ import bg from '../../public/projects_bg.png'
  const projects=[
         {name:'Hotelier', photo:Hotelier, link:" https://github.com/radhechaudhary/Hotelier.git", description:"An ultimate System for managing hotels"},
         {name:'Ai Assistant', photo:Ai, link:"https://ai-assistant-nine-bice.vercel.app/", description:"This a vocal Ai assistant using google gemini"},
-        {name:'Chat', photo:chat, link:"https://chat-app-frontend-two-gold.vercel.app/login", description:"Full fledge multi tier messaging web application"},
+        {name:"Let's Chat", photo:chat, link:"https://chat-app-frontend-two-gold.vercel.app/login", description:"Full fledge multi tier messaging web application"},
         {name:'Electricity Billing System', photo:EBS, link:"", description:"Semi automated billing system for electricity company and  consumers"},
         {name:'Keeper', photo:Keeper, link:"https://keeperappproject.vercel.app/", description:"A react application for saving Notes in it"}
     ]

@@ -12,7 +12,7 @@ function Landing() {
     const scrollRef = useRef(null)
     const vh = document.sc
     const {scrollYProgress} = useScroll();
-    var opacity =useTransform(scrollYProgress, [0,0.1], [1,0])
+    var opacity =useTransform(scrollYProgress, [0,0.07], [1,0])
     var opacity2 =useTransform(scrollYProgress, [0,0.06], [1,0])
 
     const { scrollY } = useScroll();

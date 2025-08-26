@@ -16,17 +16,15 @@ function Contact() {
         width: hovered ? 'auto' : 48,
         backgroundColor: hovered ? 'oklch(59.2% 0.249 0.584)' : 'transparent',
       }}
-      transition={{ duration: 0.2, ease: 'easeInOut' }}
+      transition={{ duration: 0.1, ease: 'easeInOut', stiffness:200 }}
     >
-      <FontAwesomeIcon icon={faMessage} style={{ fontSize: 24, color: '#7d5fff' }} />
-      <motion.p
-        className='font-bold whitespace-nowrap text-sm'
-        initial={{ opacity: 0 , clipPath:'inset(0% 0% 0% 0%)'}}
-        animate={{ opacity: hovered ? 1 : 0, clipPath: hovered ? 'inset(0% 0% 0% 0%)' : 'inset(0% 100% 0% 0%)'}}
-        transition={{ duration: 0.2 }}
+      <FontAwesomeIcon icon={faMessage} style={{ fontSize: 24, color: '#7d5fff', marginLeft:'0' }} />
+      {hovered?<motion.p
+        className='font-bold whitespace-nowrap text-sm m-0'
+        
       >
         Mail Me
-      </motion.p>
+      </motion.p>:null}
     </motion.a>
   )
 }

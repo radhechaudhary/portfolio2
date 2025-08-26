@@ -4,10 +4,10 @@ import image from '../assets/my_image.png'
 
 function About() {
   const {scrollYProgress} = useScroll() 
-  const opacity = useTransform(scrollYProgress, [0.95, 1], [0,1]) 
+  const opacity = useTransform(scrollYProgress, [0.97, 1], [0,1]) 
   return (
     <motion.div className={` w-full h-[100vh] fixed flex flex-col  -z-10 items-center top-0 left-0 pt-5 px-5 bg-[#2b2b2b]`}>
-        <h1 className='text-2xl font-extrabold mb-10 w-full '> 🤵🏻 About Me....</h1>
+        <h1 className='text-2xl font-extrabold mb-10 w-full '> 🤵🏻 Who Am I?...</h1>
         <img className='w-80 rounded-full absolute top-1/2 left-1/2 opacity-30 z-0' style={{transform:'translate(-50%, -50%)'}} src={image}/>
 
          <div className='w-full  md:w-[600px] lg:w-[700px] border-1 p-5 rounded-2xl border-gray-600 shadow-lg shadow-gray-400  '>
