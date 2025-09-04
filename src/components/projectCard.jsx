@@ -3,7 +3,7 @@ import {motion} from 'framer-motion'
 
 function ProjectCard({image, title, desc, link, sr}) {
   return (
-    <motion.div className='p-5 border-1 bg-[#1a1a1a] rounded-2xl border-gray-600 flex flex-col gap-1 w-100 z-10'
+    <motion.div className='p-5 border-1 bg-[#1a1a1a] rounded-2xl border-gray-600 flex flex-col gap-1 w-80 md:w-100 z-10'
     initial={{opacity:0, y:50, filter:"drop-shadow(0px 0px 0px #99a1af)"}}
     whileInView={{opacity:1, y:0}}
     whileHover={{filter:"drop-shadow(0px 0px 150px #99a1af)", scale:1.03}}
