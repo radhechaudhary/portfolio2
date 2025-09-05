@@ -15,12 +15,18 @@ function Landing() {
     var opacity =useTransform(scrollYProgress, [0,0.07], [1,0])
     var opacity2 =useTransform(scrollYProgress, [0,0.06], [1,0])
 
+    const handleMouseMove = (e) => {
+    const { innerWidth, innerHeight } = window;
+    const x = (e.clientY / innerHeight - 0.5) * 10; // rotateX
+    const y = (e.clientX / innerWidth - 0.5) * 10; // rotateY
+    setRotate({ x, y });
+  };
+
     const { scrollY } = useScroll();
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
         const oneVH = window.innerHeight;
-
         const unsubscribe = scrollY.on('change', (latest) => {
         setIsVisible(latest < oneVH); // unmount if scrolled past 1vh
         });
@@ -31,8 +37,10 @@ function Landing() {
   return (
     <>
     {isVisible?<>
-    <motion.div ref = {scrollRef} style={{opacity}} className='h-[100vh] hidden w-full md:flex justify-center items-center z-10  fixed top-0 left-0'>
+    <motion.div ref = {scrollRef} style={{opacity}} className='h-[100vh] hidden w-full md:flex justify-center items-center z-10  fixed top-0 left-0 '>
+
         <motion.div  className='flex flex-col items-center'>
+            
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5, duration:2}} className=''>
                 <h2 className='text-[20px] text-center text-gray-400 font-normal m-0'>I am Mohit Chaudhary</h2>
                 <Typewriter/>
