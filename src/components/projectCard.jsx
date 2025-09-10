@@ -1,9 +1,8 @@
 import React, { useRef, useEffect } from "react";
-import { motion, useMotionValue, useTransform, useSpring, useAnimation } from "framer-motion";
+import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 
 function ProjectCard({ image, title, desc, link, sr }) {
   const ref = useRef(null);
-  const controls = useAnimation()
 
   // motion values for cursor position
   const x = useMotionValue(0.5);
