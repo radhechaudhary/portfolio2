@@ -7,9 +7,11 @@ import Ai from '../assets/Ai.png'
 import Keeper from '../assets/keeper-app.png'
 import {motion, useScroll, useTransform} from 'framer-motion'
 import bg from '../../public/projects_bg.png'
+import Git_structure from '../assets/git_structure.png'
 
  const projects=[
         {name:'Hotelier', photo:Hotelier, link:" https://github.com/radhechaudhary/Hotelier.git", description:"An ultimate System for managing hotels"},
+        {name:'Git-Structure', photo:Git_structure,  link:"https://git-structure.vercel.app/", description:"Web Application to destructure your github repo"},
         {name:'Ai Assistant', photo:Ai, link:"https://ai-assistant-nine-bice.vercel.app/", description:"This a vocal Ai assistant using google gemini"},
         {name:"Let's Chat", photo:chat, link:"https://chat-app-frontend-two-gold.vercel.app/login", description:"Full fledge multi tier messaging web application"},
         {name:'Electricity Billing System', photo:EBS, link:"", description:"Semi automated billing system for electricity company and  consumers"},
