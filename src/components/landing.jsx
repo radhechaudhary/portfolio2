@@ -38,9 +38,8 @@ function Landing() {
     <>
     {isVisible?<>
     <motion.div ref = {scrollRef} style={{opacity}} className='h-[100vh] hidden w-full md:flex justify-center items-center z-10  fixed top-0 left-0 '>
-
+        <a className='absolute top-1.5 right-1.5 px-2 py-1 rounded-xl bg-violet-500 font-bold hover:bg-violet-800 hover:text-violet-200 active:scale-95 active:bg-violet-900 transition-colors z-20 ' href='./resume.pdf' download>My Resume</a>
         <motion.div  className='flex flex-col items-center'>
-            
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5, duration:2}} className=''>
                 <h2 className='text-[20px] text-center text-gray-400 font-normal m-0'>I am Mohit Chaudhary</h2>
                 <Typewriter/>
@@ -55,6 +54,7 @@ function Landing() {
         style={{backgroundImage:`url(${bg})`, backgroundPosition:'center'}}/>
     </motion.div>
     <motion.div ref = {scrollRef} style={{opacity:opacity2}} className='h-[100vh] w-full flex md:hidden justify-center items-center z-10  fixed top-0 left-0'>
+        <a className='absolute top-1.5 right-1.5 px-2 py-1 rounded-xl bg-violet-500 font-bold hover:bg-violet-800 hover:text-violet-200 active:scale-95 active:bg-violet-900 transition-colors z-20 ' fref='./resume.pdf' download>My Resume</a>
         <motion.div  className='flex flex-col items-center'>
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5, duration:2}} className=''>
                 <h2 className='text-[20px] text-center text-gray-400 font-normal m-0'>I am Mohit Chaudhary</h2>

@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@theme{
+    --font-underdog: "Underdog", system-ui;
+    --font-permananet: "Permanent Marker", cursive;
+    /* --font-bitcount: "Bitcount Prop Double Ink", system-ui; */
+    --font-indie-flower: "Indie Flower", cursive;
+}

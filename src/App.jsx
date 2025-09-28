@@ -27,9 +27,9 @@ function App(){
 
 
   return (
-   <div className=' text-white overflow-x-hidden scroll-smooth'>
+   <div className=' text-white overflow-x-hidden scroll-smooth font-permananet '>
     <motion.div
-        className="w-1 h-1 rounded-full bg-[#99a1af] opacity-50 pointer-events-none fixed z-100"
+        className="w-1 h-1 rounded-full bg-[#99a1af] opacity-50 pointer-events-none fixed z-10"
         animate={{
         x: position.x - 0.5, // center the circle
         y: position.y - 0.5,
