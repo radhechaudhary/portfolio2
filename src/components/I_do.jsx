@@ -18,7 +18,7 @@ function I_do() {
 
   return (
     <>
-    <motion.div ref = {scrollRef} style={{opacity, scale}} className='hidden w-full md:flex flex-col relative items-center mb-10 '>
+    <motion.div ref = {scrollRef} style={{opacity, scale}} className='hidden w-full md:flex flex-col relative items-center mb-10 px-5'>
       <h1 className='text-2xl font-extrabold mb-10 w-full '>💼 What I Do....</h1>
       <div className='w-full  md:w-[600px] lg:w-[700px] border-1 p-5 rounded-2xl border-gray-600 shadow-lg shadow-gray-400  '>
         <h2 className='mb-1 text-[18px] font-bold'>🚀 Full-Stack Web Development</h2>
@@ -39,7 +39,7 @@ function I_do() {
 
       </div>
     </motion.div>
-    <motion.div ref = {scrollRef2} style={{opacity:opacity2}} className='flex md:hidden w-full  flex-col relative items-center mb-10 '>
+    <motion.div ref = {scrollRef2} style={{opacity:opacity2}} className='flex md:hidden w-full  flex-col relative items-center mb-10 px-5'>
       <h1 className='text-2xl font-extrabold mb-10 w-full '>💼 What I Do....</h1>
       <div className='w-full  md:w-[600px] lg:w-[700px] border-1 p-5 rounded-2xl border-gray-600 shadow-lg shadow-gray-400  '>
         <h2 className='mb-1 text-[18px] font-bold'>🚀 Full-Stack Web Development</h2>

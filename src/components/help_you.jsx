@@ -38,7 +38,7 @@ const services = [
 
 function HowICanHelp() {
   return (
-    <section id="services" className="w-full bg-[#2b2b2b]  text-white py-16 px-6 md:px-20">
+    <section id="services" className="w-full  text-white py-16 px-6 md:px-20">
       <motion.div
         className="max-w-6xl mx-auto text-center"
         initial={{ opacity: 0, y: 30 }}

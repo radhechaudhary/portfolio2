@@ -7,6 +7,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useRef } from 'react'
 import bg from '../../public/bg_landing.png'
+import StarfieldBackground from './stars'
 
 function Landing() {
     const scrollRef = useRef(null)
@@ -36,8 +37,10 @@ function Landing() {
     
   return (
     <>
+    
     {isVisible?<>
-    <motion.div ref = {scrollRef} style={{opacity}} className='h-[100vh] hidden w-full md:flex justify-center items-center z-10  fixed top-0 left-0 '>
+    
+    <motion.div ref = {scrollRef} style={{opacity}} className='h-[100vh] hidden w-full md:flex justify-center items-center z-10 fixed top-0 left-0 '>
         <a className='absolute top-1.5 right-1.5 px-2 py-1 rounded-xl bg-violet-500 font-bold hover:bg-violet-800 hover:text-violet-200 active:scale-95 active:bg-violet-900 transition-colors z-20 ' href='./resume.pdf' download>My Resume</a>
         <motion.div  className='flex flex-col items-center'>
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5, duration:2}} className=''>
@@ -50,14 +53,13 @@ function Landing() {
                 <a href="https://www.linkedin.com/in/mohit-chaudhary-5a0002272/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} style={{ fontSize: 24, color:'GrayText' }}/></a>
             </motion.div>
         </motion.div>
-        <div className='bg-center w-full absolute h-full -z-10 opacity-[0.07]'
-        style={{backgroundImage:`url(${bg})`, backgroundPosition:'center'}}/>
+       <StarfieldBackground/>
     </motion.div>
     <motion.div ref = {scrollRef} style={{opacity:opacity2}} className='h-[100vh] w-full flex md:hidden justify-center items-center z-10  fixed top-0 left-0'>
-        <a className='absolute top-1.5 right-1.5 px-2 py-1 rounded-xl bg-violet-500 font-bold hover:bg-violet-800 hover:text-violet-200 active:scale-95 active:bg-violet-900 transition-colors z-20 ' fref='./resume.pdf' download>My Resume</a>
+        <a className='absolute top-1.5 right-1.5 px-2 py-1 rounded-xl bg-violet-500 font-bold hover:bg-violet-800 hover:text-violet-200 active:scale-95 active:bg-violet-900 transition-colors z-20 ' href='./resume.pdf' download>My Resume</a>
         <motion.div  className='flex flex-col items-center'>
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5, duration:2}} className=''>
-                <h2 className='text-[20px] text-center text-gray-400 font-normal m-0'>I am Mohit Chaudhary</h2>
+                <h2 className='text-[20px] text-center text-gray-400 font-normal m-0'>I'm Mohit Chaudhary</h2>
                 <Typewriter/>
             </motion.div>
             <motion.div initial={{x:-2000}} animate={{x:0}} transition={{delay:1}} className='mt-5 flex justify-center gap-3'>
@@ -66,9 +68,7 @@ function Landing() {
                 <a href="https://www.linkedin.com/in/mohit-chaudhary-5a0002272/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} style={{ fontSize: 24, color:'GrayText' }}/></a>
             </motion.div>
         </motion.div>
-        <div className=' bg-center w-full absolute h-full -z-10 opacity-[0.07]'
-        style={{backgroundImage:`url(${bg})`, backgroundPosition:'center'}}
-        />
+        <StarfieldBackground/>
     </motion.div>
     </>:null}
     </>

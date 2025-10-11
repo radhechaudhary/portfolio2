@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 
-function ProjectCard({ image, title, desc, link, sr }) {
+function ProjectCard({ image, title, desc, link, sr, setIsHovered, setDesc }) {
   const ref = useRef(null);
 
   // motion values for cursor position
@@ -23,30 +23,39 @@ function ProjectCard({ image, title, desc, link, sr }) {
     x.set(posX);
     y.set(posY);
   };
-
-
   return (
+    <motion.div className="flex"
+    initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+    >
     <motion.div
       ref={ref}
-      className="p-5 bg-[#1a1a1a] rounded-2xl border border-gray-600 flex flex-col gap-2 w-full md:w-100 z-10 cursor-pointer"
+      className="p-3 bg-[#1a1a1a] rounded-2xl border border-gray-600 flex flex-col gap-1 w-full md:w-100 z-10 cursor-pointer"
       style={{
         rotateX,
         rotateY,
         transformStyle: "preserve-3d",
       }}
+      onMouseEnter={()=>{
+        setIsHovered(true)
+        setDesc(sr);
+      }}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => {
         x.set(0.5);
         y.set(0.5);
+        setIsHovered(false)
       }}
       initial={{ opacity: 0, y: 0 }}
-      whileInView={{ opacity: 1, y: 0 }}
       variants={{
-          hover: { scale: 1.1 }, 
-        }}
+        hover: { scale: 1.1 }, 
+      }}
+      whileInView={{ opacity: 1, y: 0 }}
       whileHover='hover'
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
+      
       {/* Image */}
       <motion.img
         src={image}
@@ -87,6 +96,7 @@ function ProjectCard({ image, title, desc, link, sr }) {
           {"Visit Now >"}
         </a>
       </div>
+    </motion.div>
     </motion.div>
   );
 }

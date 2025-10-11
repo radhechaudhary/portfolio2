@@ -27,9 +27,9 @@ function App(){
 
 
   return (
-   <div className=' text-white overflow-x-hidden scroll-smooth font-permananet '>
+   <div className=' text-white overflow-x-hidden scroll-smooth font-permananet'>
     <motion.div
-        className="w-1 h-1 rounded-full bg-[#99a1af] opacity-50 pointer-events-none fixed z-10"
+        className="w-1 h-1 rounded-full bg-[#99a1af] opacity-50 pointer-events-none fixed z-15"
         animate={{
         x: position.x - 0.5, // center the circle
         y: position.y - 0.5,
@@ -43,16 +43,19 @@ function App(){
         boxShadow: "0 0 70px 70px #99a1af",
       }}
       ></motion.div>
-      <div className='bg-[#2b2b2b] pt-[50vh] px-5'>
+      <div className='bg-[#2b2b2b] pt-[50vh]'>
           <Contact/>
           <Landing/>
           <I_do/>
           <Projects/>
+          <HowICanHelp/>
       </div>
-      <HowICanHelp/>
       <Empty/>
       <About/>
-      <Footer/>
+      <div className='bg-[#2b2b2b]'>
+        <Footer/>
+      </div>
+      
    </div>
   )
 }
