@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 
-function ProjectCard({ image, title, desc, link, sr, setIsHovered, setDesc }) {
+function ProjectCard({ image, title, desc, link, sr, setCurrCard }) {
   const ref = useRef(null);
 
   // motion values for cursor position
@@ -9,8 +9,8 @@ function ProjectCard({ image, title, desc, link, sr, setIsHovered, setDesc }) {
   const y = useMotionValue(0.5);
 
   // rotate values derived from cursor
-  const rotateXRaw = useTransform(y, [0, 1], [30, -30]);
-  const rotateYRaw = useTransform(x, [0, 1], [-30, 30]);
+  const rotateXRaw = useTransform(y, [0, 1], [20, -20]);
+  const rotateYRaw = useTransform(x, [0, 1], [-20, 20]);
 
   // add spring for smooth transition
   const rotateX = useSpring(rotateXRaw, { stiffness: 150, damping: 20 });
@@ -24,12 +24,13 @@ function ProjectCard({ image, title, desc, link, sr, setIsHovered, setDesc }) {
     y.set(posY);
   };
   return (
-    <motion.div className="flex"
-    initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
+    <motion.div className="flex isolate"
+    onClick={()=>setCurrCard(sr-1)}
+    layoutId={`project-card-${sr}`}
+    transition={{ layout: { type: 'spring' } }}
     >
     <motion.div
+      layoutId={`project-card-body-${sr}`}
       ref={ref}
       className="p-3 bg-[#1a1a1a] rounded-2xl border border-gray-600 flex flex-col gap-1 w-full md:w-100 z-10 cursor-pointer"
       style={{
@@ -37,23 +38,18 @@ function ProjectCard({ image, title, desc, link, sr, setIsHovered, setDesc }) {
         rotateY,
         transformStyle: "preserve-3d",
       }}
-      onMouseEnter={()=>{
-        setIsHovered(true)
-        setDesc(sr);
-      }}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => {
         x.set(0.5);
         y.set(0.5);
-        setIsHovered(false)
       }}
       initial={{ opacity: 0, y: 0 }}
       variants={{
-        hover: { scale: 1.1 }, 
+        hover: { scale: 1.05 }, 
       }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover='hover'
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      transition={{ duration: 0.4}}
     >
       
       {/* Image */}
@@ -73,19 +69,16 @@ function ProjectCard({ image, title, desc, link, sr, setIsHovered, setDesc }) {
 
       {/* Title with hover slide */}
       <div className="h-8 overflow-y-hidden" style={{ transform: "translateZ(60px)" }}>
-        <motion.div
-          
-        >
+        <motion.div>
           <h2 className="font-bold text-xl flex gap-2">
             <span className="text-gray-500">{sr}.</span>
             {title}
           </h2>
-         
         </motion.div>
       </div>
 
       {/* Description */}
-      <div style={{ transform: "translateZ(40px)" }}>
+      <motion.div layoutId={`project-card-desc-${sr}`} style={{ transform: "translateZ(40px)" }}>
         <p className="text-gray-300 text-[14px]">{desc}</p>
         <a
           className="text-violet-600"
@@ -95,7 +88,7 @@ function ProjectCard({ image, title, desc, link, sr, setIsHovered, setDesc }) {
         >
           {"Visit Now >"}
         </a>
-      </div>
+      </motion.div>
     </motion.div>
     </motion.div>
   );
