@@ -12,24 +12,26 @@ function About() {
 
          <div className='w-full  md:w-[600px] lg:w-[700px] border-1 p-5 rounded-2xl border-gray-600 shadow-lg shadow-gray-400  '>
             <h2 className='mb-1 text-[18px] font-bold'>Who am I ?</h2>
-            <p>Hi! I'm Mohit Chaudhary, a passionate Full-Stack Developer based in Mathura, Uttar Pradesh with a strong foundation in React, React Native, Node.js, and PostgreSQL. I love crafting clean, efficient code and building scalable applications — whether it's a modern web dashboard or a smooth mobile experience.</p>
+            <p>Hi! I'm Mohit Chaudhary, a passionate Full-Stack Developer based in New Delhi, India with a strong foundation in React, javascript,  Node.js, and PostgreSQL. I love crafting clean, efficient code and building scalable applications — whether it's a modern web dashboard or a smooth mobile experience.</p>
 
-            <p className='hidden md:block'>I'm currently focused on creating interactive, real-time apps that blend intuitive UI/UX with robust backend logic. With a solid grip on Data Structures and Algorithms, I ensure that performance and optimization are always part of the solution.</p>
+            <p className='hidden md:block'>I'm currently focused on learning AI ml & creating interactive, real-time apps that blend intuitive UI/UX with robust backend logic. With a solid grip on Data Structures and Algorithms, I ensure that performance and optimization are always part of the solution.</p>
 
             <p>Beyond code, I enjoy experimenting with new tools, contributing to open-source, and continuously learning to stay ahead in the ever-evolving tech landscape.</p>
             <br/>
             <h2  className='mb-1 text-[18px] font-bold'>🔧 Tech Stack Highlights:-</h2>
-            <p>1. Frontend: React.js, react-native Tailwind CSS, HTML5, CSS3</p>
+            <p>1. Frontend: React.js, react-native, Tailwind CSS, HTML5, CSS3</p>
 
             <p>2. Mobile: React Native</p>
 
             <p>3. Backend: Node.js, Express.js</p>
 
-            <p>4. Database: PostgreSQL, Firebase</p>
+            <p>4. Database: PostgreSQL</p>
 
             <p>5. Auth: Google OAuth, JWT</p>
 
             <p>6. Tools: Git, Railway, Vercel, Expo</p>
+
+            <p>7. Core: DBMS, OOPS, networking, DSA, OS, Machine Learning</p>
         </div>
     </motion.div>
   )

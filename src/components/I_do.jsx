@@ -18,47 +18,81 @@ function I_do() {
 
   return (
     <>
-    <motion.div ref = {scrollRef} style={{opacity, scale}} className='hidden w-full md:flex flex-col relative items-center mb-10 px-5'>
+    <motion.div ref = {scrollRef} transition={{type:'spring'}} style={{opacity, scale}} className='hidden w-full md:flex flex-col relative items-center mb-10 px-5'>
       <h1 className='text-2xl font-extrabold mb-10 w-full '>💼 What I Do....</h1>
-      <div className='w-full  md:w-[600px] lg:w-[700px] border-1 p-5 rounded-2xl border-gray-600 shadow-lg shadow-gray-400  '>
-        <h2 className='mb-1 text-[18px] font-bold'>🚀 Full-Stack Web Development</h2>
-        <p className='mb-5 text-[14px] text-gray-200'>I build scalable, responsive web applications using modern technologies like React, Node.js, Express, and PostgreSQL. From frontend UI to backend APIs, I deliver complete, functional systems.
-          📱 Mobile App Development
-          Using React Native, I create smooth and efficient mobile applications for Android. My focus is on clean UI, offline access, and real-time features like chat, video calls, and notifications.
+      <div className='w-full md:w-[600px] lg:w-[700px] border-1 p-5 rounded-2xl border-gray-600 shadow-lg shadow-gray-400'>
+
+        <h2 className='mb-1 text-[18px] font-bold'>🎓 MCA Student & Developer</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          MCA student at <strong>GGSIPU (Main Campus)</strong>. I build fast, scalable applications and I'm learning
+          <strong> Machine Learning</strong> and <strong>GenAI</strong>.
         </p>
-        <h2 className='mb-1 text-[18px] font-bold'>🧠 Problem Solving & DSA</h2>
-        <p className='mb-5 text-[14px] text-gray-200'>I regularly practice Data Structures & Algorithms to improve performance and problem-solving skills. I’m comfortable with arrays, trees, graphs, recursion, and dynamic programming.</p>
-        <h2 className='mb-1 text-[18px] font-bold'>☁️ API Integration & Backend Logic</h2>
-        <p className='mb-5 text-[14px] text-gray-200'>I design secure, RESTful APIs, implement JWT-based authentication, and integrate third-party services like Google Sign-In, WebRTC, Socket.io, and cloud storage solutions like Google Drive.</p>
 
-        <h2 className='mb-1 text-[18px] font-bold'>🔒 Secure & Optimized Systems</h2>
-        <p className='mb-5 text-[14px] text-gray-200'>I focus on writing clean, modular code with attention to performance, data security, and user privacy — especially in applications handling sensitive data like customer records or payments.</p>
+        <h2 className='mb-1 text-[18px] font-bold'>🚀 Full-Stack Development</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          I create responsive, optimized web apps using React, Node.js, Express, and PostgreSQL with a focus on clean structure and performance.
+        </p>
 
-        <h2 className='mb-1 text-[18px] font-bold'>🎨 UI/UX Focus</h2>
-        <p className='mb-5 text-[14px] text-gray-200'>I care deeply about intuitive design. I use Tailwind CSS and modern design systems to ensure a smooth, responsive, and visually appealing user experience.</p>
+        <h2 className='mb-1 text-[18px] font-bold'>📱 Mobile Apps</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          I build smooth React Native apps with features like chat, audio/video calls, and offline support.
+        </p>
+
+        <h2 className='mb-1 text-[18px] font-bold'>🧠 DSA & Problem Solving</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          I practice DSA regularly—arrays, trees, graphs, recursion, and DP—to improve problem-solving skills.
+        </p>
+
+        <h2 className='mb-1 text-[18px] font-bold'>🔐 Backend, APIs & Auth</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          I design secure APIs, implement JWT/OAuth authentication, and work with WebRTC, Socket.io, and cloud integrations.
+        </p>
+
+        <h2 className='mb-1 text-[18px] font-bold'>🎨 UI/UX</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          I build clean, intuitive UIs using React and Tailwind with attention to smooth interactions and responsive layouts.
+        </p>
 
       </div>
+
     </motion.div>
     <motion.div ref = {scrollRef2} style={{opacity:opacity2}} className='flex md:hidden w-full  flex-col relative items-center mb-10 px-5'>
       <h1 className='text-2xl font-extrabold mb-10 w-full '>💼 What I Do....</h1>
-      <div className='w-full  md:w-[600px] lg:w-[700px] border-1 p-5 rounded-2xl border-gray-600 shadow-lg shadow-gray-400  '>
-        <h2 className='mb-1 text-[18px] font-bold'>🚀 Full-Stack Web Development</h2>
-        <p className='mb-5 text-[14px] text-gray-200'>I build scalable, responsive web applications using modern technologies like React, Node.js, Express, and PostgreSQL. From frontend UI to backend APIs, I deliver complete, functional systems.
-          📱 Mobile App Development
-          Using React Native, I create smooth and efficient mobile applications for Android. My focus is on clean UI, offline access, and real-time features like chat, video calls, and notifications.
+      <div className='w-full md:w-[600px] lg:w-[700px] border-1 p-5 rounded-2xl border-gray-600 shadow-lg shadow-gray-400'>
+
+        <h2 className='mb-1 text-[18px] font-bold'>🎓 MCA Student & Developer</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          MCA student at <strong>GGSIPU (Main Campus)</strong>. I build fast, scalable applications and I'm learning
+          <strong> Machine Learning</strong> and <strong>GenAI</strong>.
         </p>
-        <h2 className='mb-1 text-[18px] font-bold'>🧠 Problem Solving & DSA</h2>
-        <p className='mb-5 text-[14px] text-gray-200'>I regularly practice Data Structures & Algorithms to improve performance and problem-solving skills. I’m comfortable with arrays, trees, graphs, recursion, and dynamic programming.</p>
-        <h2 className='mb-1 text-[18px] font-bold'>☁️ API Integration & Backend Logic</h2>
-        <p className='mb-5 text-[14px] text-gray-200'>I design secure, RESTful APIs, implement JWT-based authentication, and integrate third-party services like Google Sign-In, WebRTC, Socket.io, and cloud storage solutions like Google Drive.</p>
 
-        <h2 className='mb-1 text-[18px] font-bold'>🔒 Secure & Optimized Systems</h2>
-        <p className='mb-5 text-[14px] text-gray-200'>I focus on writing clean, modular code with attention to performance, data security, and user privacy — especially in applications handling sensitive data like customer records or payments.</p>
+        <h2 className='mb-1 text-[18px] font-bold'>🚀 Full-Stack Development</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          I create responsive, optimized web apps using React, Node.js, Express, and PostgreSQL with a focus on clean structure and performance.
+        </p>
 
-        <h2 className='mb-1 text-[18px] font-bold'>🎨 UI/UX Focus</h2>
-        <p className='mb-5 text-[14px] text-gray-200'>I care deeply about intuitive design. I use Tailwind CSS and modern design systems to ensure a smooth, responsive, and visually appealing user experience.</p>
+        <h2 className='mb-1 text-[18px] font-bold'>📱 Mobile Apps</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          I build smooth React Native apps with features like chat, audio/video calls, and offline support.
+        </p>
+
+        <h2 className='mb-1 text-[18px] font-bold'>🧠 DSA & Problem Solving</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          I practice DSA regularly—arrays, trees, graphs, recursion, and DP—to improve problem-solving skills.
+        </p>
+
+        <h2 className='mb-1 text-[18px] font-bold'>🔐 Backend, APIs & Auth</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          I design secure APIs, implement JWT/OAuth authentication, and work with WebRTC, Socket.io, and cloud integrations.
+        </p>
+
+        <h2 className='mb-1 text-[18px] font-bold'>🎨 UI/UX</h2>
+        <p className='mb-5 text-[14px] text-gray-200'>
+          I build clean, intuitive UIs using React and Tailwind with attention to smooth interactions and responsive layouts.
+        </p>
 
       </div>
+
     </motion.div>
     </>
   )

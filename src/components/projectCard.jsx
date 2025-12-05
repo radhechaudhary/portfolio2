@@ -24,15 +24,14 @@ function ProjectCard({ image, title, desc, link, sr, setCurrCard }) {
     y.set(posY);
   };
   return (
-    <motion.div className="flex isolate"
-    onClick={()=>setCurrCard(sr-1)}
-    layoutId={`project-card-${sr}`}
-    transition={{ layout: { type: 'spring' } }}
+    <motion.div className="flex"
+      onClick={()=>setCurrCard(sr-1)}
+      layoutId={`project-card-${sr}`}
+      transition={{ type: 'spring' }}
     >
     <motion.div
-      layoutId={`project-card-body-${sr}`}
       ref={ref}
-      className="p-3 bg-[#1a1a1a] rounded-2xl border border-gray-600 flex flex-col gap-1 w-full md:w-100 z-10 cursor-pointer"
+      className={`p-3 bg-[#1a1a1a] rounded-2xl border border-gray-600 flex flex-col gap-1 w-full md:w-100 ${index===currC} cursor-pointer`}
       style={{
         rotateX,
         rotateY,
@@ -61,7 +60,7 @@ function ProjectCard({ image, title, desc, link, sr, setCurrCard }) {
           hover: { scale: 1.1 }, 
         }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        style={{ z:30}}
+        style={{z:30}}
       />
 
       {/* Divider */}
@@ -69,17 +68,17 @@ function ProjectCard({ image, title, desc, link, sr, setCurrCard }) {
 
       {/* Title with hover slide */}
       <div className="h-8 overflow-y-hidden" style={{ transform: "translateZ(60px)" }}>
-        <motion.div>
+        <div>
           <h2 className="font-bold text-xl flex gap-2">
             <span className="text-gray-500">{sr}.</span>
             {title}
           </h2>
-        </motion.div>
+        </div>
       </div>
 
       {/* Description */}
-      <motion.div layoutId={`project-card-desc-${sr}`} style={{ transform: "translateZ(40px)" }}>
-        <p className="text-gray-300 text-[14px]">{desc}</p>
+      <div  style={{ transform: "translateZ(40px)" }}>
+        <motion.p layoutId={`project-card-desc-${sr}`} className="text-gray-300 text-[14px]">{desc}</motion.p>
         <a
           className="text-violet-600"
           href={link}
@@ -88,7 +87,7 @@ function ProjectCard({ image, title, desc, link, sr, setCurrCard }) {
         >
           {"Visit Now >"}
         </a>
-      </motion.div>
+      </div>
     </motion.div>
     </motion.div>
   );
